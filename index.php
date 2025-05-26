@@ -1,9 +1,82 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <?php echo '<p>Hello, World!, in PHP</p>'; ?>
-  </body>
+<!-- ICS2O-Assignment-5-PHP -->
+<html lang="en-ca">
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Arithmetic Sequence, in PHP" />
+  <meta name="keywords" content="mths, icd2o" />
+  <meta name="author" content="Bain Liao" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-orange.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <title>Arithmetic Sequence, in PHP</title>
+</head>
+
+
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Arithmetic Sequence, in PHP</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/sequence_formula.png" alt="Formula" />
+      </div>
+      <div class="page-content">Please enter in the starting value, the common difference, and how many terms it should generate:</div>
+      <br />
+      <!-- Simple Textfield for integers-->
+      <form action="answer.php">
+        <span>Starting Value:</span>
+        <div class="mdl-textfield mdl-js-textfield">
+          <!-- input pattern attribute -->
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="starting-value" />
+          <!-- mdl-textfield__label -->
+          <label class="mdl-textfield__label" for="demo-input">Starting value...</label>
+          <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a number</span>
+        </div>
+        <br />
+        <span>Common Difference:</span>
+        <!-- Simple Textfield for integers-->
+        <div class="mdl-textfield mdl-js-textfield">
+          <!-- input pattern attribute -->
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="common-difference" />
+          <!-- mdl-textfield__label -->
+          <label class="mdl-textfield__label" for="demo-input">Common difference...</label>
+          <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a number</span>
+        </div>
+        <br />
+        <span>Number of Terms:</span>
+        <!-- Simple Textfield for integers-->
+        <div class="mdl-textfield mdl-js-textfield">
+          <!-- input pattern attribute -->
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="number-of-terms" />
+          <!-- mdl-textfield__label -->
+          <label class="mdl-textfield__label" for="demo-input">Number of terms...</label>
+          <!-- class "mdl-textfield__error" -->
+          <span class="mdl-textfield__error">Input is not a number</span>
+        </div>
+        <br />
+        <!-- Accent-colored raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          type="submit">
+          Calculate
+        </button>
+      </form>
+    </main>
+  </div>
+</body>
+
+
 </html>
